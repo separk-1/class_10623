@@ -1,0 +1,16 @@
+{"time":"2025-01-27T09:30:29.7809778-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250127_093029-pno9tit3\\logs\\debug-core.log"}
+{"time":"2025-01-27T09:30:29.8938768-05:00","level":"INFO","msg":"created new stream","id":"pno9tit3"}
+{"time":"2025-01-27T09:30:29.8938768-05:00","level":"INFO","msg":"stream: started","id":"pno9tit3"}
+{"time":"2025-01-27T09:30:29.8938768-05:00","level":"INFO","msg":"handler: started","stream_id":"pno9tit3"}
+{"time":"2025-01-27T09:30:29.8938768-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"pno9tit3"}
+{"time":"2025-01-27T09:30:29.8938768-05:00","level":"INFO","msg":"sender: started","stream_id":"pno9tit3"}
+{"time":"2025-01-27T09:30:30.123583-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-27T09:30:31.6546049-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-27T09:30:31.6546049-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-27T09:30:32.0531495-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-27T09:30:32.4228273-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-27T09:30:33.4351728-05:00","level":"INFO","msg":"stream: closing","id":"pno9tit3"}
+{"time":"2025-01-27T09:30:33.4351728-05:00","level":"INFO","msg":"handler: closed","stream_id":"pno9tit3"}
+{"time":"2025-01-27T09:30:33.4351728-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pno9tit3"}
+{"time":"2025-01-27T09:30:33.4351728-05:00","level":"INFO","msg":"sender: closed","stream_id":"pno9tit3"}
+{"time":"2025-01-27T09:30:33.4551903-05:00","level":"INFO","msg":"stream: closed","id":"pno9tit3"}

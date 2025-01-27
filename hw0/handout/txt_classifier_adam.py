@@ -128,13 +128,14 @@ class PadSequence():
 
 
 def log_histogram_of_article_lengths(dataset):
-    #wandb.init(project="text-classification", name="article_length_histogram")
+    wandb.init(project="text-classification", name="article_length_histogram")
 
     # 기사 길이 측정 및 MAX_LEN 적용
     lengths = [min(len(str(text).split()), MAX_LEN) for text, _ in dataset if isinstance(text, str)]
 
     if not lengths:
         print("No valid data found for logging.")
+        wandb.finish()
         return
 
     # 0부터 50 단위로 구간 나누기
@@ -150,7 +151,7 @@ def log_histogram_of_article_lengths(dataset):
     print(f"Logged {len(lengths)} article lengths with 50-unit bins to wandb.")
     print(wandb.run.summary)
 
-    #wandb.finish()
+    wandb.finish()
 
 
 def get_data():    
@@ -219,45 +220,30 @@ def train_one_epoch(dataloader, model, criterion, optimizer, epoch):
         total_count += label.size(0)
         if idx % log_interval == 0 and idx > 0:
             elapsed = time.time() - start_time
-            train_acc = total_acc / total_count
             print(
                 "| epoch {:3d} | {:5d}/{:5d} batches "
                 "| accuracy {:8.3f}".format(
                     epoch, idx, len(dataloader), total_acc / total_count
                 )
             )
-            wandb.log({"epoch": epoch, "train_accuracy": train_acc, "train_loss": loss.item()})
-            
             total_acc, total_count = 0, 0
             start_time = time.time()
 
 
-def evaluate(dataloader, model, criterion, epoch, phase="Validation"):
+def evaluate(dataloader, model, criterion):
     model.eval()
     total_acc, total_count = 0, 0
-    total_loss = 0
 
     with torch.no_grad():
-        for text, label in dataloader:
+        for idx, (text, label) in enumerate(dataloader):
             text, label = text.to(device), label.to(device)
             predicted_label = model(text)
             loss = criterion(predicted_label, label)
             total_acc += (predicted_label.argmax(1) == label).sum().item()
             total_count += label.size(0)
-            total_loss += loss.item()
-
-    accuracy = total_acc / total_count
-    avg_loss = total_loss / len(dataloader)
-
-    # Validation accuracy 및 loss epoch 단위 로깅
-    wandb.log({f"{phase}_accuracy": accuracy, f"{phase}_loss": avg_loss, "epoch": epoch})
-    print(f"Epoch {epoch}: {phase} Accuracy: {accuracy:.3f}, {phase} Loss: {avg_loss:.3f}")
-    
-    return accuracy
+    return total_acc / total_count
 
 def main():
-    wandb.init(project="text-classification", name=" Text Classification", reinit=True)
-    
     corpus_info, train_dataloader, val_dataloader, test_dataloader = get_data()
     # 훈련 데이터셋 로드 (전처리 없이 원본 기사 길이 확인)
     train_dataset = CsvTextDataset(csv_file='./data/txt_train.csv', transform=None)
@@ -274,7 +260,7 @@ def main():
     for epoch in range(1, EPOCHS + 1):
         epoch_start_time = time.time()
         train_one_epoch(train_dataloader, model, criterion, optimizer, epoch)
-        accu_val = evaluate(val_dataloader, model, criterion, epoch, phase="Validation")
+        accu_val = evaluate(val_dataloader, model, criterion)
         if total_accu is not None and total_accu > accu_val:
             scheduler.step()
         else:
@@ -289,15 +275,13 @@ def main():
         print("-" * 59)
 
     print("Checking the results of test dataset.")
-    accu_test = evaluate(test_dataloader, model, criterion, epoch, phase="Test")
+    accu_test = evaluate(test_dataloader, model, criterion)
     print("test accuracy {:8.3f}".format(accu_test))
 
     
     print("Checking the results of val dataset.")
-    accu_val = evaluate(val_dataloader, model, criterion, epoch, phase="Validation")
+    accu_test = evaluate(val_dataloader, model, criterion)
     print("val accuracy {:8.3f}".format(accu_val))
-    
 
 if __name__ == '__main__':
     main()
-    wandb.finish()
