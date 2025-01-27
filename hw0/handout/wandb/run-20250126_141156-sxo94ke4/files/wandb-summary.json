@@ -1,0 +1,1 @@
+{"Test Avg Loss":0.860710142814007,"_runtime":103.944349,"_step":294,"Epoch":4,"_timestamp":1.7379188209772503e+09,"Examples Seen":456,"_wandb":{"runtime":105},"Batch Loss":0.012225702404975891,"Train Avg Loss":0.024532875768889875,"Test Accuracy":73.19587628865979,"Train Accuracy":99.77827050997783}

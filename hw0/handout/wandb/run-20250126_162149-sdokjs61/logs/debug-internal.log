@@ -1,0 +1,21 @@
+{"time":"2025-01-26T16:21:50.2361989-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_162149-sdokjs61\\logs\\debug-core.log"}
+{"time":"2025-01-26T16:21:50.3476214-05:00","level":"INFO","msg":"created new stream","id":"sdokjs61"}
+{"time":"2025-01-26T16:21:50.3476214-05:00","level":"INFO","msg":"stream: started","id":"sdokjs61"}
+{"time":"2025-01-26T16:21:50.3476214-05:00","level":"INFO","msg":"handler: started","stream_id":"sdokjs61"}
+{"time":"2025-01-26T16:21:50.3476214-05:00","level":"INFO","msg":"sender: started","stream_id":"sdokjs61"}
+{"time":"2025-01-26T16:21:50.3476214-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"sdokjs61"}
+{"time":"2025-01-26T16:21:50.5751011-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T16:22:00.5760011-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:22:10.5762392-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:22:20.5762708-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:22:30.5766129-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:22:40.5759303-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:22:45.1477483-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T16:22:45.1482543-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T16:22:45.7074075-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T16:22:45.893983-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T16:22:46.9003277-05:00","level":"INFO","msg":"stream: closing","id":"sdokjs61"}
+{"time":"2025-01-26T16:22:46.9003277-05:00","level":"INFO","msg":"handler: closed","stream_id":"sdokjs61"}
+{"time":"2025-01-26T16:22:46.9003277-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"sdokjs61"}
+{"time":"2025-01-26T16:22:46.9003277-05:00","level":"INFO","msg":"sender: closed","stream_id":"sdokjs61"}
+{"time":"2025-01-26T16:22:46.9191968-05:00","level":"INFO","msg":"stream: closed","id":"sdokjs61"}

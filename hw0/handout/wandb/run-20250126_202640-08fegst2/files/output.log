@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_q1.py", line 274, in <module>
+    main()
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_q1.py", line 244, in main
+    log_text_length_histogram_wandb(train_dataset)
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_q1.py", line 141, in log_text_length_histogram_wandb
+    "article_length_histogram": wandb.Histogram(bin_edges[:-1], hist)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\wandb\sdk\data_types\histogram.py", line 56, in __init__
+    if np_histogram:
+       ^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

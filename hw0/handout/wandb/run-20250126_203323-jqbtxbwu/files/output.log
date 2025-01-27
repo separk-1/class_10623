@@ -1,0 +1,4 @@
+Sample article lengths: [401, 430, 1024, 464, 820, 566, 410, 1024, 228, 456]
+Min length: 8, Max length: 1024
+Total articles processed: 300
+Logged 300 articles' lengths to wandb.

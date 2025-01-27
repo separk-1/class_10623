@@ -1,0 +1,15 @@
+{"time":"2025-01-26T18:09:50.7560728-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_180950-wpw2ouvy\\logs\\debug-core.log"}
+{"time":"2025-01-26T18:09:50.8676101-05:00","level":"INFO","msg":"created new stream","id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:50.8676101-05:00","level":"INFO","msg":"stream: started","id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:50.8676101-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:50.8676101-05:00","level":"INFO","msg":"handler: started","stream_id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:50.8676101-05:00","level":"INFO","msg":"sender: started","stream_id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:51.0681442-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T18:09:51.5849659-05:00","level":"INFO","msg":"stream: closing","id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:51.5849659-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T18:09:51.5854794-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T18:09:51.9597819-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T18:09:52.1202081-05:00","level":"INFO","msg":"handler: closed","stream_id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:52.1202081-05:00","level":"INFO","msg":"sender: closed","stream_id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:52.1202081-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wpw2ouvy"}
+{"time":"2025-01-26T18:09:52.13313-05:00","level":"INFO","msg":"stream: closed","id":"wpw2ouvy"}

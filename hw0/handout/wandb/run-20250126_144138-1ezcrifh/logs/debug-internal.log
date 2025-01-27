@@ -1,0 +1,25 @@
+{"time":"2025-01-26T14:41:38.6135006-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_144138-1ezcrifh\\logs\\debug-core.log"}
+{"time":"2025-01-26T14:41:38.7242049-05:00","level":"INFO","msg":"created new stream","id":"1ezcrifh"}
+{"time":"2025-01-26T14:41:38.7242049-05:00","level":"INFO","msg":"stream: started","id":"1ezcrifh"}
+{"time":"2025-01-26T14:41:38.7242049-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"1ezcrifh"}
+{"time":"2025-01-26T14:41:38.7242049-05:00","level":"INFO","msg":"handler: started","stream_id":"1ezcrifh"}
+{"time":"2025-01-26T14:41:38.7242049-05:00","level":"INFO","msg":"sender: started","stream_id":"1ezcrifh"}
+{"time":"2025-01-26T14:41:38.9331961-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T14:41:48.9334586-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:41:58.933498-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:42:08.933395-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:42:18.9335832-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:42:28.9333185-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:42:38.9336407-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:42:48.9333133-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:42:58.9335966-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:43:08.9335237-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:43:12.9304788-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T14:43:12.9309838-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T14:43:13.3912373-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T14:43:13.5376619-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T14:43:14.5557672-05:00","level":"INFO","msg":"stream: closing","id":"1ezcrifh"}
+{"time":"2025-01-26T14:43:14.5557672-05:00","level":"INFO","msg":"handler: closed","stream_id":"1ezcrifh"}
+{"time":"2025-01-26T14:43:14.5557672-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1ezcrifh"}
+{"time":"2025-01-26T14:43:14.5557672-05:00","level":"INFO","msg":"sender: closed","stream_id":"1ezcrifh"}
+{"time":"2025-01-26T14:43:14.5749279-05:00","level":"INFO","msg":"stream: closed","id":"1ezcrifh"}

@@ -1,0 +1,29 @@
+Using cuda device
+Shape of X [B, C, H, W]: torch.Size([8, 3, 256, 256])
+Shape of y: torch.Size([8]) torch.int64
+NeuralNetwork(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=196608, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=3, bias=True)
+  )
+)
+
+Epoch 1
+-------------------------------
+Train batch avg loss = 1.118343  [    8/  451]
+Train batch avg loss = 1.775229  [   88/  451]
+Train batch avg loss = 1.054976  [  168/  451]
+Train batch avg loss = 0.926119  [  248/  451]
+Train batch avg loss = 1.306688  [  328/  451]
+Train batch avg loss = 0.646478  [  408/  451]
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_q2.py", line 190, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_q2.py", line 157, in main
+    val_loss, val_acc = evaluate(test_dataloader, model, loss_fn)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: evaluate() missing 1 required positional argument: 'loss_fn'

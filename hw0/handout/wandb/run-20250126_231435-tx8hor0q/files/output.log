@@ -1,0 +1,11 @@
+Shape of X [B, N]: torch.Size([8, 1024])
+Shape of y: torch.Size([8]) torch.int64
+Logged 300 article lengths with 50-unit bins to wandb.
+<wandb.sdk.wandb_summary.Summary object at 0x0000021671ADFE90>
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_base.py", line 307, in <module>
+    main()
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_base.py", line 265, in main
+    model = TextClassificationModel(
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TextClassificationModel.__init__() got an unexpected keyword argument 'hidden_dim'

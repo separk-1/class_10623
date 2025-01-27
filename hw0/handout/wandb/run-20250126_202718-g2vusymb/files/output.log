@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_q1.py", line 275, in <module>
+    main()
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_q1.py", line 245, in main
+    log_text_length_histogram_wandb(train_dataset)
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_q1.py", line 141, in log_text_length_histogram_wandb
+    "article_length_histogram": wandb.Histogram(np.histogram(lengths, bins=bins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\wandb\sdk\data_types\histogram.py", line 77, in __init__
+    histogram, bins = np.histogram(sequence, bins=num_bins)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\numpy\lib\histograms.py", line 778, in histogram
+    a, weights = _ravel_and_check_weights(a, weights)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\numpy\lib\histograms.py", line 285, in _ravel_and_check_weights
+    a = np.asarray(a)
+        ^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.

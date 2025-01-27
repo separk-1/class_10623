@@ -1,0 +1,17 @@
+{"time":"2025-01-26T14:14:46.6293427-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_141446-hgztxb67\\logs\\debug-core.log"}
+{"time":"2025-01-26T14:14:46.7417053-05:00","level":"INFO","msg":"created new stream","id":"hgztxb67"}
+{"time":"2025-01-26T14:14:46.7417053-05:00","level":"INFO","msg":"stream: started","id":"hgztxb67"}
+{"time":"2025-01-26T14:14:46.7417053-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"hgztxb67"}
+{"time":"2025-01-26T14:14:46.7417053-05:00","level":"INFO","msg":"handler: started","stream_id":"hgztxb67"}
+{"time":"2025-01-26T14:14:46.7417053-05:00","level":"INFO","msg":"sender: started","stream_id":"hgztxb67"}
+{"time":"2025-01-26T14:14:46.8751336-05:00","level":"ERROR","msg":"HTTP error","status":403,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-01-26T14:14:46.8751336-05:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: returned error 403 Forbidden: {\"errors\":[{\"message\":\"permission denied\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2025-01-26T14:14:46.8850438-05:00","level":"INFO","msg":"stream: closing","id":"hgztxb67"}
+{"time":"2025-01-26T14:14:46.8850438-05:00","level":"ERROR","msg":"sender: upsertConfig: RunRecord is nil"}
+{"time":"2025-01-26T14:14:46.9988916-05:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-01-26T14:14:46.9988916-05:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"project /img_classification_project not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2025-01-26T14:14:47.0014494-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T14:14:47.0014494-05:00","level":"INFO","msg":"handler: closed","stream_id":"hgztxb67"}
+{"time":"2025-01-26T14:14:47.0014494-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hgztxb67"}
+{"time":"2025-01-26T14:14:47.0014494-05:00","level":"INFO","msg":"sender: closed","stream_id":"hgztxb67"}
+{"time":"2025-01-26T14:14:47.0127207-05:00","level":"INFO","msg":"stream: closed","id":"hgztxb67"}

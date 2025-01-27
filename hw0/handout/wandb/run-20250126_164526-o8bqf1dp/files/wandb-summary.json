@@ -1,0 +1,1 @@
+{"_step":2255,"_wandb":{"runtime":52},"Epoch":4,"Train Loss (epoch avg)":0.13870411113466233,"Batch Loss":0.05472264687220255,"Examples Seen":2255,"Train Accuracy":0.9733924611973392,"_timestamp":1.737927978660071e+09,"_runtime":51.7961215,"Validation Accuracy":0.4742268041237113,"Validation Loss (epoch avg)":1.4309021799834734}

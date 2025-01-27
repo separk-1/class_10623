@@ -1,0 +1,16 @@
+{"time":"2025-01-26T22:03:38.4453692-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_220338-umfupr24\\logs\\debug-core.log"}
+{"time":"2025-01-26T22:03:38.5597209-05:00","level":"INFO","msg":"created new stream","id":"umfupr24"}
+{"time":"2025-01-26T22:03:38.5597209-05:00","level":"INFO","msg":"stream: started","id":"umfupr24"}
+{"time":"2025-01-26T22:03:38.5597209-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"umfupr24"}
+{"time":"2025-01-26T22:03:38.5597209-05:00","level":"INFO","msg":"handler: started","stream_id":"umfupr24"}
+{"time":"2025-01-26T22:03:38.5597209-05:00","level":"INFO","msg":"sender: started","stream_id":"umfupr24"}
+{"time":"2025-01-26T22:03:38.7870595-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T22:03:38.8457487-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T22:03:38.8457487-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T22:03:39.4604767-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T22:03:39.7012837-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T22:03:40.7098985-05:00","level":"INFO","msg":"stream: closing","id":"umfupr24"}
+{"time":"2025-01-26T22:03:40.7098985-05:00","level":"INFO","msg":"handler: closed","stream_id":"umfupr24"}
+{"time":"2025-01-26T22:03:40.7098985-05:00","level":"INFO","msg":"sender: closed","stream_id":"umfupr24"}
+{"time":"2025-01-26T22:03:40.7098985-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"umfupr24"}
+{"time":"2025-01-26T22:03:40.7222043-05:00","level":"INFO","msg":"stream: closed","id":"umfupr24"}

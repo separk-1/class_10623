@@ -1,0 +1,65 @@
+Shape of X [B, N]: torch.Size([8, 1024])
+Shape of y: torch.Size([8]) torch.int64
+Logged 300 article lengths with 50-unit bins to wandb.
+<wandb.sdk.wandb_summary.Summary object at 0x000001DF924681D0>
+| epoch   1 |     5/   38 batches | accuracy    0.562
+| epoch   1 |    10/   38 batches | accuracy    0.525
+| epoch   1 |    15/   38 batches | accuracy    0.600
+| epoch   1 |    20/   38 batches | accuracy    0.700
+| epoch   1 |    25/   38 batches | accuracy    0.700
+| epoch   1 |    30/   38 batches | accuracy    0.725
+| epoch   1 |    35/   38 batches | accuracy    0.775
+Epoch 1: Validation Accuracy: 0.766, Validation Loss: 40.720
+-----------------------------------------------------------
+| end of epoch   1 | time:  0.29s | valid accuracy    0.766
+-----------------------------------------------------------
+| epoch   2 |     5/   38 batches | accuracy    0.688
+| epoch   2 |    10/   38 batches | accuracy    0.850
+| epoch   2 |    15/   38 batches | accuracy    0.775
+| epoch   2 |    20/   38 batches | accuracy    0.700
+| epoch   2 |    25/   38 batches | accuracy    0.800
+| epoch   2 |    30/   38 batches | accuracy    0.775
+| epoch   2 |    35/   38 batches | accuracy    0.750
+Epoch 2: Validation Accuracy: 0.875, Validation Loss: 87.498
+-----------------------------------------------------------
+| end of epoch   2 | time:  0.14s | valid accuracy    0.875
+-----------------------------------------------------------
+| epoch   3 |     5/   38 batches | accuracy    0.958
+| epoch   3 |    10/   38 batches | accuracy    0.950
+| epoch   3 |    15/   38 batches | accuracy    0.875
+| epoch   3 |    20/   38 batches | accuracy    0.800
+| epoch   3 |    25/   38 batches | accuracy    0.975
+| epoch   3 |    30/   38 batches | accuracy    0.975
+| epoch   3 |    35/   38 batches | accuracy    0.950
+Epoch 3: Validation Accuracy: 0.719, Validation Loss: 315.149
+-----------------------------------------------------------
+| end of epoch   3 | time:  0.13s | valid accuracy    0.719
+-----------------------------------------------------------
+| epoch   4 |     5/   38 batches | accuracy    0.917
+| epoch   4 |    10/   38 batches | accuracy    0.925
+| epoch   4 |    15/   38 batches | accuracy    0.875
+| epoch   4 |    20/   38 batches | accuracy    0.950
+| epoch   4 |    25/   38 batches | accuracy    0.950
+| epoch   4 |    30/   38 batches | accuracy    1.000
+| epoch   4 |    35/   38 batches | accuracy    0.975
+Epoch 4: Validation Accuracy: 0.953, Validation Loss: 37.270
+-----------------------------------------------------------
+| end of epoch   4 | time:  0.14s | valid accuracy    0.953
+-----------------------------------------------------------
+| epoch   5 |     5/   38 batches | accuracy    0.938
+| epoch   5 |    10/   38 batches | accuracy    1.000
+| epoch   5 |    15/   38 batches | accuracy    1.000
+| epoch   5 |    20/   38 batches | accuracy    0.975
+| epoch   5 |    25/   38 batches | accuracy    1.000
+| epoch   5 |    30/   38 batches | accuracy    1.000
+| epoch   5 |    35/   38 batches | accuracy    0.950
+Epoch 5: Validation Accuracy: 0.922, Validation Loss: 47.046
+-----------------------------------------------------------
+| end of epoch   5 | time:  0.14s | valid accuracy    0.922
+-----------------------------------------------------------
+Checking the results of test dataset.
+Epoch 5: Test Accuracy: 0.939, Test Loss: 220.075
+test accuracy    0.939
+Checking the results of val dataset.
+Epoch 5: Validation Accuracy: 0.922, Validation Loss: 47.046
+val accuracy    0.922

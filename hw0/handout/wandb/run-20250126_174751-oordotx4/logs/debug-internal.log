@@ -1,0 +1,23 @@
+{"time":"2025-01-26T17:47:52.1199948-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_174751-oordotx4\\logs\\debug-core.log"}
+{"time":"2025-01-26T17:47:52.2317144-05:00","level":"INFO","msg":"created new stream","id":"oordotx4"}
+{"time":"2025-01-26T17:47:52.2317144-05:00","level":"INFO","msg":"stream: started","id":"oordotx4"}
+{"time":"2025-01-26T17:47:52.2317144-05:00","level":"INFO","msg":"sender: started","stream_id":"oordotx4"}
+{"time":"2025-01-26T17:47:52.2317144-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"oordotx4"}
+{"time":"2025-01-26T17:47:52.2317144-05:00","level":"INFO","msg":"handler: started","stream_id":"oordotx4"}
+{"time":"2025-01-26T17:47:52.4327047-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T17:48:02.4331238-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:48:12.4330731-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:48:22.433093-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:48:32.4337226-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:48:42.4327562-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:48:52.4328456-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:49:02.4328111-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T17:49:03.6719476-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T17:49:03.6724529-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T17:49:04.2112025-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T17:49:04.352303-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T17:49:05.3659901-05:00","level":"INFO","msg":"stream: closing","id":"oordotx4"}
+{"time":"2025-01-26T17:49:05.3659901-05:00","level":"INFO","msg":"handler: closed","stream_id":"oordotx4"}
+{"time":"2025-01-26T17:49:05.3659901-05:00","level":"INFO","msg":"sender: closed","stream_id":"oordotx4"}
+{"time":"2025-01-26T17:49:05.3659901-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"oordotx4"}
+{"time":"2025-01-26T17:49:05.377613-05:00","level":"INFO","msg":"stream: closed","id":"oordotx4"}

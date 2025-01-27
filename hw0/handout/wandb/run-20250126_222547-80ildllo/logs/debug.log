@@ -1,0 +1,13 @@
+2025-01-26 22:25:47,754 INFO    MainThread:26972 [wandb_init.py:setup_run_log_directory():624] Logging user logs to G:\My Drive\Git\class_10623\hw0\handout\wandb\run-20250126_222547-80ildllo\logs\debug.log
+2025-01-26 22:25:47,755 INFO    MainThread:26972 [wandb_init.py:setup_run_log_directory():625] Logging internal logs to G:\My Drive\Git\class_10623\hw0\handout\wandb\run-20250126_222547-80ildllo\logs\debug-internal.log
+2025-01-26 22:25:47,756 INFO    MainThread:26972 [wandb_init.py:init():743] calling init triggers
+2025-01-26 22:25:47,756 INFO    MainThread:26972 [wandb_init.py:init():748] wandb.init called with sweep_config: {}
+config: {}
+2025-01-26 22:25:47,756 INFO    MainThread:26972 [wandb_init.py:init():768] wandb.init() called when a run is still active
+2025-01-26 22:25:48,115 INFO    MainThread:26972 [wandb_run.py:_finish():2134] finishing run spark_park/text-classification/bqqek5it
+2025-01-26 22:25:48,115 INFO    MainThread:26972 [wandb_run.py:_atexit_cleanup():2374] got exitcode: 0
+2025-01-26 22:25:48,117 INFO    MainThread:26972 [wandb_run.py:_restore():2356] restore
+2025-01-26 22:25:48,117 INFO    MainThread:26972 [wandb_run.py:_restore():2362] restore done
+2025-01-26 22:25:50,285 INFO    MainThread:26972 [wandb_run.py:_footer_history_summary_info():3976] rendering history
+2025-01-26 22:25:50,285 INFO    MainThread:26972 [wandb_run.py:_footer_history_summary_info():4008] rendering summary
+2025-01-26 22:25:50,286 INFO    MainThread:26972 [wandb_run.py:_footer_sync_info():3937] logging synced files

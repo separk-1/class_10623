@@ -1,0 +1,22 @@
+{"time":"2025-01-26T16:51:44.462119-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_165144-4yu87ya5\\logs\\debug-core.log"}
+{"time":"2025-01-26T16:51:44.5731651-05:00","level":"INFO","msg":"created new stream","id":"4yu87ya5"}
+{"time":"2025-01-26T16:51:44.5731651-05:00","level":"INFO","msg":"stream: started","id":"4yu87ya5"}
+{"time":"2025-01-26T16:51:44.5731651-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"4yu87ya5"}
+{"time":"2025-01-26T16:51:44.5731651-05:00","level":"INFO","msg":"handler: started","stream_id":"4yu87ya5"}
+{"time":"2025-01-26T16:51:44.5731651-05:00","level":"INFO","msg":"sender: started","stream_id":"4yu87ya5"}
+{"time":"2025-01-26T16:51:44.7826138-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T16:51:54.7830612-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:52:04.783311-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:52:14.7828328-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:52:24.7831328-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:52:34.7829704-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:52:44.7828214-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T16:52:48.3493409-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T16:52:48.3498466-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T16:52:48.8257079-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T16:52:48.9948533-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T16:52:50.0010682-05:00","level":"INFO","msg":"stream: closing","id":"4yu87ya5"}
+{"time":"2025-01-26T16:52:50.0010682-05:00","level":"INFO","msg":"handler: closed","stream_id":"4yu87ya5"}
+{"time":"2025-01-26T16:52:50.0010682-05:00","level":"INFO","msg":"sender: closed","stream_id":"4yu87ya5"}
+{"time":"2025-01-26T16:52:50.0010682-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4yu87ya5"}
+{"time":"2025-01-26T16:52:50.0194376-05:00","level":"INFO","msg":"stream: closed","id":"4yu87ya5"}

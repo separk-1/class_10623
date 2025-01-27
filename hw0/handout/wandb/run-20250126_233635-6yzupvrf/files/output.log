@@ -1,0 +1,18 @@
+Shape of X [B, N]: torch.Size([8, 1024])
+Shape of y: torch.Size([8]) torch.int64
+Logged 300 article lengths with 50-unit bins to wandb.
+<wandb.sdk.wandb_summary.Summary object at 0x0000019D1A20A990>
+| epoch   1 |     5/   38 batches | accuracy    0.458
+| epoch   1 |    10/   38 batches | accuracy    0.525
+| epoch   1 |    15/   38 batches | accuracy    0.625
+| epoch   1 |    20/   38 batches | accuracy    0.600
+| epoch   1 |    25/   38 batches | accuracy    0.725
+| epoch   1 |    30/   38 batches | accuracy    0.725
+| epoch   1 |    35/   38 batches | accuracy    0.825
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_base.py", line 302, in <module>
+    main()
+  File "G:\My Drive\Git\class_10623\hw0\handout\txt_classifier_base.py", line 277, in main
+    accu_val = evaluate(val_dataloader, model, criterion, phase="Validation")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: evaluate() missing 1 required positional argument: 'epoch'

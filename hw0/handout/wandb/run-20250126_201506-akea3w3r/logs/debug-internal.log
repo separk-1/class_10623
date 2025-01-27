@@ -1,0 +1,16 @@
+{"time":"2025-01-26T20:15:07.1641864-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_201506-akea3w3r\\logs\\debug-core.log"}
+{"time":"2025-01-26T20:15:07.2794426-05:00","level":"INFO","msg":"created new stream","id":"akea3w3r"}
+{"time":"2025-01-26T20:15:07.2794426-05:00","level":"INFO","msg":"stream: started","id":"akea3w3r"}
+{"time":"2025-01-26T20:15:07.2794426-05:00","level":"INFO","msg":"handler: started","stream_id":"akea3w3r"}
+{"time":"2025-01-26T20:15:07.2794426-05:00","level":"INFO","msg":"sender: started","stream_id":"akea3w3r"}
+{"time":"2025-01-26T20:15:07.2794426-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"akea3w3r"}
+{"time":"2025-01-26T20:15:07.5465098-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T20:15:07.617527-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T20:15:07.6180434-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T20:15:08.2432477-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T20:15:08.4217579-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T20:15:09.4391725-05:00","level":"INFO","msg":"stream: closing","id":"akea3w3r"}
+{"time":"2025-01-26T20:15:09.4391725-05:00","level":"INFO","msg":"handler: closed","stream_id":"akea3w3r"}
+{"time":"2025-01-26T20:15:09.4391725-05:00","level":"INFO","msg":"sender: closed","stream_id":"akea3w3r"}
+{"time":"2025-01-26T20:15:09.4391725-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"akea3w3r"}
+{"time":"2025-01-26T20:15:09.4537268-05:00","level":"INFO","msg":"stream: closed","id":"akea3w3r"}

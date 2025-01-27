@@ -1,0 +1,26 @@
+Using cuda device
+Shape of X [B, C, H, W]: torch.Size([8, 3, 256, 256])
+Shape of y: torch.Size([8]) torch.int64
+NeuralNetwork(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=196608, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=3, bias=True)
+  )
+)
+
+Epoch 1
+-------------------------------
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier.py", line 172, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier.py", line 148, in main
+    examples_seen = train_one_epoch(train_dataloader, model, loss_fn, optimizer, t, examples_seen)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier.py", line 107, in train_one_epoch
+    "Batch Loss": loss.item() / batch_size,
+                  ^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'

@@ -1,0 +1,29 @@
+Using cuda device
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_q2.py", line 201, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_q2.py", line 152, in main
+    train_dataloader, validation_dataloader, test_dataloader = get_data(batch_size)
+                                                               ^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_q2.py", line 59, in get_data
+    validation_data = CsvImageDataset(csv_file='./data/img_validation.csv', transform=transform_img)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_q2.py", line 26, in __init__
+    self.data_frame = pd.read_csv(csv_file)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './data/img_validation.csv'

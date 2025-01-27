@@ -1,0 +1,16 @@
+{"time":"2025-01-26T14:57:53.3175439-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_145753-ub9k1247\\logs\\debug-core.log"}
+{"time":"2025-01-26T14:57:53.4295756-05:00","level":"INFO","msg":"created new stream","id":"ub9k1247"}
+{"time":"2025-01-26T14:57:53.4295756-05:00","level":"INFO","msg":"stream: started","id":"ub9k1247"}
+{"time":"2025-01-26T14:57:53.4295756-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"ub9k1247"}
+{"time":"2025-01-26T14:57:53.4295756-05:00","level":"INFO","msg":"handler: started","stream_id":"ub9k1247"}
+{"time":"2025-01-26T14:57:53.4295756-05:00","level":"INFO","msg":"sender: started","stream_id":"ub9k1247"}
+{"time":"2025-01-26T14:57:53.6529272-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T14:58:03.6529888-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:58:09.9962496-05:00","level":"INFO","msg":"stream: closing","id":"ub9k1247"}
+{"time":"2025-01-26T14:58:09.9962496-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T14:58:09.997282-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T14:58:10.3866609-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T14:58:10.5401281-05:00","level":"INFO","msg":"handler: closed","stream_id":"ub9k1247"}
+{"time":"2025-01-26T14:58:10.5401281-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ub9k1247"}
+{"time":"2025-01-26T14:58:10.5401281-05:00","level":"INFO","msg":"sender: closed","stream_id":"ub9k1247"}
+{"time":"2025-01-26T14:58:10.552522-05:00","level":"INFO","msg":"stream: closed","id":"ub9k1247"}

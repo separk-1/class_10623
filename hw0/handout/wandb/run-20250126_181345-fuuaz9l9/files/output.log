@@ -1,0 +1,59 @@
+Using cuda device
+Shape of X [B, C, H, W]: torch.Size([8, 3, 256, 256])
+Shape of y: torch.Size([8]) torch.int64
+NeuralNetwork(
+  (conv_stack): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(4, 4), stride=(4, 4))
+    (1): LayerNorm((128, 64, 64), eps=1e-05, elementwise_affine=True)
+    (2): Conv2d(128, 128, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3))
+    (3): LayerNorm((128, 64, 64), eps=1e-05, elementwise_affine=True)
+    (4): Flatten(start_dim=2, end_dim=-1)
+    (5): Linear(in_features=128, out_features=256, bias=True)
+    (6): Unflatten(dim=1, unflattened_size=(256, 64, 64))
+    (7): GELU(approximate='none')
+    (8): Linear(in_features=256, out_features=128, bias=True)
+    (9): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    (10): Flatten(start_dim=1, end_dim=-1)
+    (11): Linear(in_features=131072, out_features=3, bias=True)
+  )
+)
+
+Epoch 1
+-------------------------------
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 234, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 190, in main
+    train_loss, train_acc, examples_seen = train_one_epoch(train_dataloader, model, loss_fn, optimizer, t, examples_seen)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 125, in train_one_epoch
+    pred = model(X)
+           ^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 112, in forward
+    logits = self.conv_stack(x)  # 전체 네트워크 통과
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1024x4096 and 128x256)

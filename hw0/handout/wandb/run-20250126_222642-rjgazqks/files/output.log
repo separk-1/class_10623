@@ -1,0 +1,4 @@
+Shape of X [B, N]: torch.Size([8, 1024])
+Shape of y: torch.Size([8]) torch.int64
+Logged 300 article lengths with 50-unit bins to wandb.
+<wandb.sdk.wandb_summary.Summary object at 0x000002EC4759F590>

@@ -1,0 +1,16 @@
+{"time":"2025-01-26T22:36:45.8451183-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_223645-ozjfb0o1\\logs\\debug-core.log"}
+{"time":"2025-01-26T22:36:45.9554576-05:00","level":"INFO","msg":"created new stream","id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:45.9554576-05:00","level":"INFO","msg":"stream: started","id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:45.9554576-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:45.9554576-05:00","level":"INFO","msg":"sender: started","stream_id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:45.9554576-05:00","level":"INFO","msg":"handler: started","stream_id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:46.3887954-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T22:36:46.8145986-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T22:36:46.8151517-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T22:36:47.7027519-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T22:36:47.8248351-05:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-0, summary, console lines 0-1","runtime_seconds":0.1220832}],"total_operations":1}}
+{"time":"2025-01-26T22:36:48.8650029-05:00","level":"INFO","msg":"stream: closing","id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:48.8650029-05:00","level":"INFO","msg":"handler: closed","stream_id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:48.8650029-05:00","level":"INFO","msg":"sender: closed","stream_id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:48.8650029-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ozjfb0o1"}
+{"time":"2025-01-26T22:36:48.8870974-05:00","level":"INFO","msg":"stream: closed","id":"ozjfb0o1"}

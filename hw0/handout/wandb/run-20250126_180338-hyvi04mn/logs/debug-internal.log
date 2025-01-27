@@ -1,0 +1,15 @@
+{"time":"2025-01-26T18:03:39.1176194-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_180338-hyvi04mn\\logs\\debug-core.log"}
+{"time":"2025-01-26T18:03:39.2291223-05:00","level":"INFO","msg":"created new stream","id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:39.2291223-05:00","level":"INFO","msg":"stream: started","id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:39.2291223-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:39.2291223-05:00","level":"INFO","msg":"sender: started","stream_id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:39.2291223-05:00","level":"INFO","msg":"handler: started","stream_id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:39.4372159-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T18:03:40.4647918-05:00","level":"INFO","msg":"stream: closing","id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:40.4647918-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T18:03:40.465305-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T18:03:40.8506271-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T18:03:41.0016421-05:00","level":"INFO","msg":"handler: closed","stream_id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:41.0016421-05:00","level":"INFO","msg":"sender: closed","stream_id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:41.0016421-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hyvi04mn"}
+{"time":"2025-01-26T18:03:41.0228846-05:00","level":"INFO","msg":"stream: closed","id":"hyvi04mn"}

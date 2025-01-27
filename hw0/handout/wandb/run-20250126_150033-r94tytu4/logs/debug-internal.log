@@ -1,0 +1,25 @@
+{"time":"2025-01-26T15:00:33.7476417-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_150033-r94tytu4\\logs\\debug-core.log"}
+{"time":"2025-01-26T15:00:33.8592502-05:00","level":"INFO","msg":"created new stream","id":"r94tytu4"}
+{"time":"2025-01-26T15:00:33.8592502-05:00","level":"INFO","msg":"stream: started","id":"r94tytu4"}
+{"time":"2025-01-26T15:00:33.8592502-05:00","level":"INFO","msg":"handler: started","stream_id":"r94tytu4"}
+{"time":"2025-01-26T15:00:33.8592502-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"r94tytu4"}
+{"time":"2025-01-26T15:00:33.8592502-05:00","level":"INFO","msg":"sender: started","stream_id":"r94tytu4"}
+{"time":"2025-01-26T15:00:34.1888041-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T15:00:44.1898366-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:00:54.1895385-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:01:04.1896335-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:01:14.1890438-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:01:24.1889999-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:01:34.1890064-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:01:44.1889579-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:01:54.1892092-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:02:04.1890821-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T15:02:09.5093762-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T15:02:09.5093762-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T15:02:09.9557103-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T15:02:10.1281101-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T15:02:11.1353563-05:00","level":"INFO","msg":"stream: closing","id":"r94tytu4"}
+{"time":"2025-01-26T15:02:11.1353563-05:00","level":"INFO","msg":"handler: closed","stream_id":"r94tytu4"}
+{"time":"2025-01-26T15:02:11.1353563-05:00","level":"INFO","msg":"sender: closed","stream_id":"r94tytu4"}
+{"time":"2025-01-26T15:02:11.1353563-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"r94tytu4"}
+{"time":"2025-01-26T15:02:11.1542897-05:00","level":"INFO","msg":"stream: closed","id":"r94tytu4"}

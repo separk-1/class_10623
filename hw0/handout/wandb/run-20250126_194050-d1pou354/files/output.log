@@ -1,0 +1,65 @@
+Using cuda device
+Shape of X [B, C, H, W]: torch.Size([8, 3, 256, 256])
+Shape of y: torch.Size([8]) torch.int64
+NeuralNetwork(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=196608, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=3, bias=True)
+  )
+)
+
+Epoch 1
+-------------------------------
+Train batch avg loss = 1.131517  [    8/  451]
+Train batch avg loss = 1.741405  [   88/  451]
+Train batch avg loss = 1.082991  [  168/  451]
+Train batch avg loss = 0.947461  [  248/  451]
+Train batch avg loss = 1.212972  [  328/  451]
+Train batch avg loss = 0.637607  [  408/  451]
+Train Loss: 1.086365, Validation Loss: 0.832521, Validation Accuracy: 63.92%
+
+Epoch 2
+-------------------------------
+Train batch avg loss = 0.206589  [  459/  451]
+Train batch avg loss = 0.960390  [  539/  451]
+Train batch avg loss = 0.581116  [  619/  451]
+Train batch avg loss = 0.441976  [  699/  451]
+Train batch avg loss = 0.820324  [  779/  451]
+Train batch avg loss = 0.211090  [  859/  451]
+Train Loss: 0.512670, Validation Loss: 0.882687, Validation Accuracy: 61.86%
+
+Epoch 3
+-------------------------------
+Train batch avg loss = 0.063359  [  910/  451]
+Train batch avg loss = 0.748600  [  990/  451]
+Train batch avg loss = 0.246454  [ 1070/  451]
+Train batch avg loss = 0.235550  [ 1150/  451]
+Train batch avg loss = 0.231870  [ 1230/  451]
+Train batch avg loss = 0.037683  [ 1310/  451]
+Train Loss: 0.246625, Validation Loss: 1.070066, Validation Accuracy: 58.76%
+
+Epoch 4
+-------------------------------
+Train batch avg loss = 0.031863  [ 1361/  451]
+Train batch avg loss = 0.234914  [ 1441/  451]
+Train batch avg loss = 0.024892  [ 1521/  451]
+Train batch avg loss = 0.038972  [ 1601/  451]
+Train batch avg loss = 0.054839  [ 1681/  451]
+Train batch avg loss = 0.015526  [ 1761/  451]
+Train Loss: 0.089205, Validation Loss: 1.174867, Validation Accuracy: 67.01%
+
+Epoch 5
+-------------------------------
+Train batch avg loss = 0.010342  [ 1812/  451]
+Train batch avg loss = 0.089172  [ 1892/  451]
+Train batch avg loss = 0.013694  [ 1972/  451]
+Train batch avg loss = 0.019180  [ 2052/  451]
+Train batch avg loss = 0.289274  [ 2132/  451]
+Train batch avg loss = 0.004328  [ 2212/  451]
+Train Loss: 0.047904, Validation Loss: 1.078050, Validation Accuracy: 67.01%
+Done!
+Saved PyTorch Model State to model.pth

@@ -1,0 +1,26 @@
+{"time":"2025-01-26T14:15:36.3026222-05:00","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"G:\\My Drive\\Git\\class_10623\\hw0\\handout\\wandb\\run-20250126_141536-y362wt5w\\logs\\debug-core.log"}
+{"time":"2025-01-26T14:15:36.4142691-05:00","level":"INFO","msg":"created new stream","id":"y362wt5w"}
+{"time":"2025-01-26T14:15:36.4142691-05:00","level":"INFO","msg":"stream: started","id":"y362wt5w"}
+{"time":"2025-01-26T14:15:36.4142691-05:00","level":"INFO","msg":"sender: started","stream_id":"y362wt5w"}
+{"time":"2025-01-26T14:15:36.4142691-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"y362wt5w"}
+{"time":"2025-01-26T14:15:36.4142691-05:00","level":"INFO","msg":"handler: started","stream_id":"y362wt5w"}
+{"time":"2025-01-26T14:15:36.7300445-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-26T14:15:46.7303612-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:15:56.7301406-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:16:06.7303426-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:16:16.7302138-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:16:26.7302249-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:16:36.7303604-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:16:46.7307659-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:16:56.7308946-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:17:06.7305642-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:17:16.7338467-05:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-01-26T14:17:23.7550043-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-26T14:17:23.7555107-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-26T14:17:24.4614284-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-26T14:17:24.6206287-05:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-01-26T14:17:25.6257869-05:00","level":"INFO","msg":"stream: closing","id":"y362wt5w"}
+{"time":"2025-01-26T14:17:25.6257869-05:00","level":"INFO","msg":"handler: closed","stream_id":"y362wt5w"}
+{"time":"2025-01-26T14:17:25.6257869-05:00","level":"INFO","msg":"sender: closed","stream_id":"y362wt5w"}
+{"time":"2025-01-26T14:17:25.6257869-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"y362wt5w"}
+{"time":"2025-01-26T14:17:25.6454389-05:00","level":"INFO","msg":"stream: closed","id":"y362wt5w"}

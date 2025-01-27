@@ -1,0 +1,42 @@
+Using cuda device
+Shape of X [B, C, H, W]: torch.Size([8, 3, 256, 256])
+Shape of y: torch.Size([8]) torch.int64
+NeuralNetwork(
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (conv_stack): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(4, 4), stride=(4, 4))
+    (1): LayerNorm((128, 64, 64), eps=1e-05, elementwise_affine=True)
+    (2): Conv2d(128, 128, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3))
+    (3): LayerNorm((128, 64, 64), eps=1e-05, elementwise_affine=True)
+    (4): Linear(in_features=524288, out_features=256, bias=True)
+    (5): GELU(approximate='none')
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    (8): Flatten(start_dim=1, end_dim=-1)
+    (9): Linear(in_features=131072, out_features=3, bias=True)
+  )
+)
+
+Epoch 1
+-------------------------------
+Traceback (most recent call last):
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 235, in <module>
+    main(args.n_epochs, args.batch_size, args.learning_rate)
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 191, in main
+    train_loss, train_acc, examples_seen = train_one_epoch(train_dataloader, model, loss_fn, optimizer, t, examples_seen)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 126, in train_one_epoch
+    pred = model(X)
+           ^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Git\class_10623\hw0\handout\img_classifier_new.py", line 115, in forward
+    logits = self.linear_relu_stack(x)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\82102\anaconda3\envs\class_10623\Lib\site-packages\torch\nn\modules\module.py", line 1931, in __getattr__
+    raise AttributeError(
+AttributeError: 'NeuralNetwork' object has no attribute 'linear_relu_stack'

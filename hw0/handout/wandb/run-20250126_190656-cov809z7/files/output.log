@@ -1,0 +1,219 @@
+Using cuda device
+Shape of X [B, C, H, W]: torch.Size([8, 3, 256, 256])
+Shape of y: torch.Size([8]) torch.int64
+NeuralNetwork(
+  (conv_stack): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(4, 4), stride=(4, 4))
+    (1): LayerNorm((128, 64, 64), eps=1e-05, elementwise_affine=True)
+    (2): Conv2d(128, 128, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3))
+    (3): LayerNorm((128, 64, 64), eps=1e-05, elementwise_affine=True)
+    (4): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+    (5): GELU(approximate='none')
+    (6): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (7): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    (8): Flatten(start_dim=1, end_dim=-1)
+    (9): Linear(in_features=131072, out_features=3, bias=True)
+  )
+)
+
+Epoch 1
+-------------------------------
+Train batch avg loss = 1.142898  [    8/  451]
+Train batch avg loss = 2.363297  [   88/  451]
+Train batch avg loss = 0.829647  [  168/  451]
+Train batch avg loss = 0.894782  [  248/  451]
+Train batch avg loss = 1.131397  [  328/  451]
+Train batch avg loss = 0.661669  [  408/  451]
+Train Loss: 1.682755, Validation Loss: 0.696791, Validation Accuracy: 67.01%
+
+Epoch 2
+-------------------------------
+Train batch avg loss = 0.308591  [  459/  451]
+Train batch avg loss = 1.012538  [  539/  451]
+Train batch avg loss = 0.783006  [  619/  451]
+Train batch avg loss = 0.886244  [  699/  451]
+Train batch avg loss = 0.891901  [  779/  451]
+Train batch avg loss = 0.511746  [  859/  451]
+Train Loss: 0.618090, Validation Loss: 0.729380, Validation Accuracy: 71.13%
+
+Epoch 3
+-------------------------------
+Train batch avg loss = 0.131078  [  910/  451]
+Train batch avg loss = 0.890874  [  990/  451]
+Train batch avg loss = 0.772194  [ 1070/  451]
+Train batch avg loss = 0.708876  [ 1150/  451]
+Train batch avg loss = 0.605304  [ 1230/  451]
+Train batch avg loss = 0.308183  [ 1310/  451]
+Train Loss: 0.457608, Validation Loss: 0.798416, Validation Accuracy: 71.13%
+
+Epoch 4
+-------------------------------
+Train batch avg loss = 0.064459  [ 1361/  451]
+Train batch avg loss = 0.730805  [ 1441/  451]
+Train batch avg loss = 0.535550  [ 1521/  451]
+Train batch avg loss = 0.431724  [ 1601/  451]
+Train batch avg loss = 0.420814  [ 1681/  451]
+Train batch avg loss = 0.083562  [ 1761/  451]
+Train Loss: 0.318919, Validation Loss: 0.906145, Validation Accuracy: 70.10%
+
+Epoch 5
+-------------------------------
+Train batch avg loss = 0.035734  [ 1812/  451]
+Train batch avg loss = 0.550918  [ 1892/  451]
+Train batch avg loss = 0.270254  [ 1972/  451]
+Train batch avg loss = 0.174602  [ 2052/  451]
+Train batch avg loss = 0.359180  [ 2132/  451]
+Train batch avg loss = 0.039651  [ 2212/  451]
+Train Loss: 0.216114, Validation Loss: 1.026634, Validation Accuracy: 71.13%
+
+Epoch 6
+-------------------------------
+Train batch avg loss = 0.023815  [ 2263/  451]
+Train batch avg loss = 0.397602  [ 2343/  451]
+Train batch avg loss = 0.120553  [ 2423/  451]
+Train batch avg loss = 0.103435  [ 2503/  451]
+Train batch avg loss = 0.188641  [ 2583/  451]
+Train batch avg loss = 0.038781  [ 2663/  451]
+Train Loss: 0.145021, Validation Loss: 1.086660, Validation Accuracy: 72.16%
+
+Epoch 7
+-------------------------------
+Train batch avg loss = 0.018892  [ 2714/  451]
+Train batch avg loss = 0.230345  [ 2794/  451]
+Train batch avg loss = 0.086249  [ 2874/  451]
+Train batch avg loss = 0.035595  [ 2954/  451]
+Train batch avg loss = 0.089163  [ 3034/  451]
+Train batch avg loss = 0.052457  [ 3114/  451]
+Train Loss: 0.081214, Validation Loss: 1.148777, Validation Accuracy: 74.23%
+
+Epoch 8
+-------------------------------
+Train batch avg loss = 0.012829  [ 3165/  451]
+Train batch avg loss = 0.118306  [ 3245/  451]
+Train batch avg loss = 0.034359  [ 3325/  451]
+Train batch avg loss = 0.022844  [ 3405/  451]
+Train batch avg loss = 0.030490  [ 3485/  451]
+Train batch avg loss = 0.014915  [ 3565/  451]
+Train Loss: 0.044737, Validation Loss: 1.229443, Validation Accuracy: 71.13%
+
+Epoch 9
+-------------------------------
+Train batch avg loss = 0.009532  [ 3616/  451]
+Train batch avg loss = 0.042347  [ 3696/  451]
+Train batch avg loss = 0.023353  [ 3776/  451]
+Train batch avg loss = 0.015023  [ 3856/  451]
+Train batch avg loss = 0.015734  [ 3936/  451]
+Train batch avg loss = 0.008953  [ 4016/  451]
+Train Loss: 0.025399, Validation Loss: 1.329964, Validation Accuracy: 74.23%
+
+Epoch 10
+-------------------------------
+Train batch avg loss = 0.003131  [ 4067/  451]
+Train batch avg loss = 0.023064  [ 4147/  451]
+Train batch avg loss = 0.018089  [ 4227/  451]
+Train batch avg loss = 0.012877  [ 4307/  451]
+Train batch avg loss = 0.015734  [ 4387/  451]
+Train batch avg loss = 0.007627  [ 4467/  451]
+Train Loss: 0.015969, Validation Loss: 1.365917, Validation Accuracy: 73.20%
+
+Epoch 11
+-------------------------------
+Train batch avg loss = 0.003415  [ 4518/  451]
+Train batch avg loss = 0.015482  [ 4598/  451]
+Train batch avg loss = 0.011343  [ 4678/  451]
+Train batch avg loss = 0.008554  [ 4758/  451]
+Train batch avg loss = 0.008786  [ 4838/  451]
+Train batch avg loss = 0.007521  [ 4918/  451]
+Train Loss: 0.010947, Validation Loss: 1.381500, Validation Accuracy: 72.16%
+
+Epoch 12
+-------------------------------
+Train batch avg loss = 0.003346  [ 4969/  451]
+Train batch avg loss = 0.011186  [ 5049/  451]
+Train batch avg loss = 0.007518  [ 5129/  451]
+Train batch avg loss = 0.006676  [ 5209/  451]
+Train batch avg loss = 0.006129  [ 5289/  451]
+Train batch avg loss = 0.007050  [ 5369/  451]
+Train Loss: 0.008258, Validation Loss: 1.401326, Validation Accuracy: 74.23%
+
+Epoch 13
+-------------------------------
+Train batch avg loss = 0.003229  [ 5420/  451]
+Train batch avg loss = 0.009009  [ 5500/  451]
+Train batch avg loss = 0.005505  [ 5580/  451]
+Train batch avg loss = 0.005411  [ 5660/  451]
+Train batch avg loss = 0.004768  [ 5740/  451]
+Train batch avg loss = 0.006140  [ 5820/  451]
+Train Loss: 0.006637, Validation Loss: 1.422158, Validation Accuracy: 74.23%
+
+Epoch 14
+-------------------------------
+Train batch avg loss = 0.002980  [ 5871/  451]
+Train batch avg loss = 0.007509  [ 5951/  451]
+Train batch avg loss = 0.004289  [ 6031/  451]
+Train batch avg loss = 0.004495  [ 6111/  451]
+Train batch avg loss = 0.003900  [ 6191/  451]
+Train batch avg loss = 0.005262  [ 6271/  451]
+Train Loss: 0.005532, Validation Loss: 1.442521, Validation Accuracy: 74.23%
+
+Epoch 15
+-------------------------------
+Train batch avg loss = 0.002658  [ 6322/  451]
+Train batch avg loss = 0.006428  [ 6402/  451]
+Train batch avg loss = 0.003480  [ 6482/  451]
+Train batch avg loss = 0.003810  [ 6562/  451]
+Train batch avg loss = 0.003290  [ 6642/  451]
+Train batch avg loss = 0.004513  [ 6722/  451]
+Train Loss: 0.004724, Validation Loss: 1.462008, Validation Accuracy: 74.23%
+
+Epoch 16
+-------------------------------
+Train batch avg loss = 0.002341  [ 6773/  451]
+Train batch avg loss = 0.005612  [ 6853/  451]
+Train batch avg loss = 0.002911  [ 6933/  451]
+Train batch avg loss = 0.003295  [ 7013/  451]
+Train batch avg loss = 0.002842  [ 7093/  451]
+Train batch avg loss = 0.003906  [ 7173/  451]
+Train Loss: 0.004110, Validation Loss: 1.480205, Validation Accuracy: 74.23%
+
+Epoch 17
+-------------------------------
+Train batch avg loss = 0.002060  [ 7224/  451]
+Train batch avg loss = 0.004977  [ 7304/  451]
+Train batch avg loss = 0.002493  [ 7384/  451]
+Train batch avg loss = 0.002893  [ 7464/  451]
+Train batch avg loss = 0.002497  [ 7544/  451]
+Train batch avg loss = 0.003420  [ 7624/  451]
+Train Loss: 0.003630, Validation Loss: 1.497193, Validation Accuracy: 74.23%
+
+Epoch 18
+-------------------------------
+Train batch avg loss = 0.001821  [ 7675/  451]
+Train batch avg loss = 0.004470  [ 7755/  451]
+Train batch avg loss = 0.002175  [ 7835/  451]
+Train batch avg loss = 0.002577  [ 7915/  451]
+Train batch avg loss = 0.002224  [ 7995/  451]
+Train batch avg loss = 0.003026  [ 8075/  451]
+Train Loss: 0.003245, Validation Loss: 1.513010, Validation Accuracy: 74.23%
+
+Epoch 19
+-------------------------------
+Train batch avg loss = 0.001622  [ 8126/  451]
+Train batch avg loss = 0.004057  [ 8206/  451]
+Train batch avg loss = 0.001925  [ 8286/  451]
+Train batch avg loss = 0.002319  [ 8366/  451]
+Train batch avg loss = 0.002005  [ 8446/  451]
+Train batch avg loss = 0.002708  [ 8526/  451]
+Train Loss: 0.002931, Validation Loss: 1.527730, Validation Accuracy: 74.23%
+
+Epoch 20
+-------------------------------
+Train batch avg loss = 0.001454  [ 8577/  451]
+Train batch avg loss = 0.003711  [ 8657/  451]
+Train batch avg loss = 0.001725  [ 8737/  451]
+Train batch avg loss = 0.002109  [ 8817/  451]
+Train batch avg loss = 0.001822  [ 8897/  451]
+Train batch avg loss = 0.002445  [ 8977/  451]
+Train Loss: 0.002670, Validation Loss: 1.541438, Validation Accuracy: 74.23%
+Done!
+Saved PyTorch Model State to model.pth

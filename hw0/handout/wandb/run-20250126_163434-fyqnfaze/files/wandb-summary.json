@@ -1,0 +1,1 @@
+{"_step":2255,"Validation Accuracy":0.6907216494845361,"Validation Loss (epoch avg)":0.873572173192329,"Examples Seen":2255,"Train Loss (epoch avg)":0.04160818587699513,"Epoch":4,"Train Accuracy":0.9933481152993349,"_runtime":53.0499816,"Batch Loss":0.02089242140452067,"_timestamp":1.737927327916042e+09,"_wandb":{"runtime":54}}
