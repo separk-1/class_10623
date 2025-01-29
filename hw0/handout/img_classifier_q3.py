@@ -173,6 +173,8 @@ def main(n_epochs, batch_size, learning_rate):
     train_dataloader, validation_dataloader, test_dataloader = get_data(batch_size)
     
     model = NeuralNetwork().to(device)
+    total_params = sum(param.numel() for param in model.parameters())
+    print(f"Total number of model parameters: {total_params}")
     print(model)
     loss_fn = nn.CrossEntropyLoss(reduction='sum')
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
