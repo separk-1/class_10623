@@ -1,0 +1,1 @@
+chargpt.py --data.block_size=256 --model.pretrained_folder=out/rope_experiment_1200_256 --trainer.device=cuda

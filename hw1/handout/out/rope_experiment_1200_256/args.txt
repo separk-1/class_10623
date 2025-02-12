@@ -1,0 +1,1 @@
+chargpt.py --trainer.max_iters=600 --data.block_size=256 --system.work_dir=out/rope_experiment_1200_256 --model.pretrained_folder=out/rope_experiment_600_16
