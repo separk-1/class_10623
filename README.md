@@ -14,6 +14,6 @@ Covers the fundamentals and recent advances in generative AI:
 - Fine-tuning, adapters, and in-context learning  
 - Large-scale generative modeling and applications  
 
-Taught by **Pat Virtue & Matt Gormley**.  
+Taught by **Prof. Pat Virtue & Prof. Matt Gormley**.  
 
-📍 [Course Website](https://piazza.com/cmu/spring2025/10432623/home)  
+📍 [Course Website](https://www.cs.cmu.edu/~mgormley/courses/10423/syllabus.html)  
