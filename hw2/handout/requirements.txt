@@ -1,0 +1,8 @@
+scipy
+clean_fid
+einops
+Pillow
+torch
+torchvision
+tqdm
+wandb
