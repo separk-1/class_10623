@@ -25,6 +25,7 @@ def extract(a, t, x_shape):
         The extracted tensor.
     """
     b, *_ = t.shape
+    t = t.to(a.device)
     out = a.gather(-1, t)
     return out.reshape(b, *((1,) * (len(x_shape) - 1)))
 
@@ -61,8 +62,11 @@ class Diffusion(nn.Module):
         timesteps=1000,
     ):
         super().__init__()
+        
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
         self.channels = channels
         self.image_size = image_size
+        self.model = model.to(self.device)
         self.model = model
         self.num_timesteps = int(timesteps)
 
@@ -79,12 +83,15 @@ class Diffusion(nn.Module):
         ## TODO: Implement the initialization of the diffusion process ##
         # 1. define the scheduler here
         # 2. pre-compute the coefficients for the diffusion process
+
+
         self.timesteps = timesteps
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
-        self.alphas = cosine_schedule(self.num_timesteps)
-        self.one_minus_alphas=1.0 - self.alphas 
-        self.alphas_cumprod = torch.cumprod(self.alphas, dim=0)
-        self.alphas_cumprod_prev = F.pad(self.alphas_cumprod[:-1], (1, 0), value=1.0)
+        self.model = model.to(self.device)
+
+        self.alphas = cosine_schedule(self.num_timesteps).to(self.device)
+        self.one_minus_alphas = (1.0 - self.alphas).to(self.device)
+        self.alphas_cumprod = torch.cumprod(self.alphas, dim=0).to(self.device)
+        self.alphas_cumprod_prev = F.pad(self.alphas_cumprod[:-1], (1,0), value=1.0).to(self.device)
 
         self.sqrt_alphas_cumprod = torch.sqrt(self.alphas_cumprod)
         self.sqrt_one_minus_alphas_cumprod = torch.sqrt(1 - self.alphas_cumprod)
@@ -136,6 +143,9 @@ class Diffusion(nn.Module):
         # Hint: use extract function to get the coefficients at time t
         # Hint: use self.noise_like function to generate noise. DO NOT USE torch.randn
         # Begin code here
+        x = x.to(self.device) 
+        t = t.to(self.device) 
+
         alpha_t_cumprod = extract(self.alphas_cumprod, t, x.shape)
         sqrt_one_minus_alpha_t_cumprod = extract(self.sqrt_one_minus_alphas_cumprod, t, x.shape)
         
@@ -175,8 +185,11 @@ class Diffusion(nn.Module):
         # 2. inside the loop, sample x_{t-1} from the reverse diffusion process
         # 3. clamp and unnormalize the generated image to valid pixel range
         # Hint: to get time index, you can use torch.full()
+
+        img = img.to(self.device)
+        
         for t_index in reversed(range(self.timesteps)):
-            t = torch.full((b,), t_index, device=img.device, dtype=torch.long)
+            t = torch.full((b,), t_index, device=self.device, dtype=torch.long)
             img = self.p_sample(img, t, t_index)
 
         img = unnormalize_to_zero_to_one(img)
@@ -217,6 +230,9 @@ class Diffusion(nn.Module):
             The sampled images.
         """
         ###### TODO: Implement the q_sample function #######
+        x_0 = x_0.to(self.device) 
+        t = t.to(self.device)
+        noise = noise.to(self.device) 
         sqrt_alpha_t_cumprod = extract(self.sqrt_alphas_cumprod, t, x_0.shape)
         sqrt_one_minus_alpha_t_cumprod = extract(self.sqrt_one_minus_alphas_cumprod, t, x_0.shape)
         x_t = sqrt_alpha_t_cumprod * x_0 + sqrt_one_minus_alpha_t_cumprod * noise
@@ -235,6 +251,9 @@ class Diffusion(nn.Module):
         ###### TODO: Implement the p_losses function #######
         # define loss function wrt. the model output and the target
         # Hint: you can use pytorch built-in loss functions: F.l1_loss
+        x_0 = x_0.to(self.device) 
+        t = t.to(self.device)  
+        noise = noise.to(self.device)
         x_t = self.q_sample(x_0, t, noise)
         predicted_noise = self.model(x_t, t)
         loss = F.l1_loss(predicted_noise, noise)
@@ -250,6 +269,8 @@ class Diffusion(nn.Module):
         Returns:
             The computed loss.
         """
+        x_0 = x_0.to(self.device) 
+        noise = noise.to(self.device) 
         b, c, h, w, device, img_size, = *x_0.shape, x_0.device, self.image_size
         assert h == img_size and w == img_size, f'height and width of image must be {img_size}'
         ###### TODO: Implement the forward function #######
