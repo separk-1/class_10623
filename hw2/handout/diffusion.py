@@ -80,6 +80,7 @@ class Diffusion(nn.Module):
         # 1. define the scheduler here
         # 2. pre-compute the coefficients for the diffusion process
         self.timesteps = timesteps
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
         self.alphas = cosine_schedule(self.num_timesteps)
         self.one_minus_alphas=1.0 - self.alphas 
         self.alphas_cumprod = torch.cumprod(self.alphas, dim=0)
