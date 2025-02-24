@@ -1,5 +1,6 @@
 from utils import train_diffusion, visualize_diffusion
 import argparse
+import torch
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -35,11 +36,14 @@ if __name__ == "__main__":
              "sampling example images, and optional calculating FID"
     )
 
-    parser.add_argument("--visualize", action="store_true")
+    parser.add_argument("--visualize", default=None, action="store_true") 
     parser.add_argument("--dataloader_workers", default=16, type=int)
 
     args = parser.parse_args()
     print(args)
+
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     if args.visualize:
         if args.load_path is None:

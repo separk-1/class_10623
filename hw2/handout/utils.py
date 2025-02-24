@@ -77,6 +77,7 @@ def train_diffusion(train_steps, save_and_sample_every, fid,
                     time_steps=50, 
                     unet_dim=16, 
                     learning_rate=1e-3, 
+                    visualize = False,
                     dataloader_workers=16, 
                     Diffusion=None):
     wandb.login()

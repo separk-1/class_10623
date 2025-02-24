@@ -79,11 +79,30 @@ class Diffusion(nn.Module):
         ## TODO: Implement the initialization of the diffusion process ##
         # 1. define the scheduler here
         # 2. pre-compute the coefficients for the diffusion process
+        self.timesteps = timesteps
         self.alphas = cosine_schedule(self.num_timesteps)
+        self.one_minus_alphas=1.0 - self.alphas 
         self.alphas_cumprod = torch.cumprod(self.alphas, dim=0)
+        self.alphas_cumprod_prev = F.pad(self.alphas_cumprod[:-1], (1, 0), value=1.0)
+
         self.sqrt_alphas_cumprod = torch.sqrt(self.alphas_cumprod)
         self.sqrt_one_minus_alphas_cumprod = torch.sqrt(1 - self.alphas_cumprod)
         
+        self.posterior_mean_coef_xt = (
+            torch.sqrt(self.alphas) 
+            * (1.0 - self.alphas_cumprod_prev) 
+            / (1.0 - self.alphas_cumprod)
+        )
+        self.posterior_mean_coef_x0 = (
+            (1.0 - self.alphas) 
+            * torch.sqrt(self.alphas_cumprod_prev) 
+            / (1.0 - self.alphas_cumprod)
+        )
+        self.posterior_variance = (
+            self.one_minus_alphas 
+            * (1.0 - self.alphas_cumprod_prev) 
+            / (1.0 - self.alphas_cumprod)
+        )
         # ###########################################################
 
     def noise_like(self, shape, device):
@@ -116,16 +135,27 @@ class Diffusion(nn.Module):
         # Hint: use extract function to get the coefficients at time t
         # Hint: use self.noise_like function to generate noise. DO NOT USE torch.randn
         # Begin code here
-        betas_t = 1 - extract(self.alphas_cumprod, t, x.shape)
-        sqrt_one_minus_alphas_cumprod_t = extract(self.sqrt_one_minus_alphas_cumprod, t, x.shape)
-        sqrt_recip_alphas_t = 1.0 / extract(torch.sqrt(self.alphas), t, x.shape)
+        alpha_t_cumprod = extract(self.alphas_cumprod, t, x.shape)
+        sqrt_one_minus_alpha_t_cumprod = extract(self.sqrt_one_minus_alphas_cumprod, t, x.shape)
+        
+        epsilon_t = self.model(x, t)
+        x_0_hat = (x - sqrt_one_minus_alpha_t_cumprod * epsilon_t) / alpha_t_cumprod.sqrt()
+        x_0_hat = torch.clamp(x_0_hat, -1.0, 1.0)
+        
+        # posterior mean
+        posterior_mean_coef_xt_t = extract(self.posterior_mean_coef_xt, t, x.shape)
+        posterior_mean_coef_x0_t = extract(self.posterior_mean_coef_x0, t, x.shape)
+        posterior_mean_t = posterior_mean_coef_xt_t * x + posterior_mean_coef_x0_t * x_0_hat
+        
+        # posterior variance
+        posterior_variance_t = extract(self.posterior_variance, t, x.shape)
+        
+        z = self.noise_like(x.shape, device=x.device)
 
-        model_mean = sqrt_recip_alphas_t * (x - betas_t * self.model(x, t) / sqrt_one_minus_alphas_cumprod_t)
         if t_index == 0:
-            return model_mean
+            return posterior_mean_t
         else:
-            noise = self.noise_like(x.shape, x.device)
-            return model_mean + torch.sqrt(betas_t) * noise
+            return posterior_mean_t + torch.sqrt(posterior_variance_t) * z
         # ####################################################
 
     @torch.no_grad()
@@ -144,10 +174,12 @@ class Diffusion(nn.Module):
         # 2. inside the loop, sample x_{t-1} from the reverse diffusion process
         # 3. clamp and unnormalize the generated image to valid pixel range
         # Hint: to get time index, you can use torch.full()
-        for i in reversed(range(self.num_timesteps)):
-            t = torch.full((b,), i, device=img.device, dtype=torch.long)
-            img = self.p_sample(img, t, i)
-        img = img.clamp(-1, 1)
+        for t_index in reversed(range(self.timesteps)):
+            t = torch.full((b,), t_index, device=img.device, dtype=torch.long)
+            img = self.p_sample(img, t, t_index)
+
+        img = unnormalize_to_zero_to_one(img)
+        img = img.clamp(0, 1)
         return img
         # ####################################################
 
@@ -163,8 +195,12 @@ class Diffusion(nn.Module):
         self.model.eval()
         #### TODO: Implement the sample function ####
         # Hint: use self.noise_like function to generate noise. DO NOT USE torch.randn
-        img = self.noise_like((batch_size, self.channels, self.image_size, self.image_size), device="cuda")
-        img = self.p_sample_loop(img)
+        device = next(self.model.parameters()).device
+        img_0 = self.noise_like(
+            (batch_size, self.channels, self.image_size, self.image_size),
+            device=device
+        )
+        img = self.p_sample_loop(img_0)
         return img
 
     # forward diffusion
@@ -180,7 +216,9 @@ class Diffusion(nn.Module):
             The sampled images.
         """
         ###### TODO: Implement the q_sample function #######
-        x_t = extract(self.sqrt_alphas_cumprod, t, x_0.shape) * x_0 + extract(self.sqrt_one_minus_alphas_cumprod, t, x_0.shape) * noise
+        sqrt_alpha_t_cumprod = extract(self.sqrt_alphas_cumprod, t, x_0.shape)
+        sqrt_one_minus_alpha_t_cumprod = extract(self.sqrt_one_minus_alphas_cumprod, t, x_0.shape)
+        x_t = sqrt_alpha_t_cumprod * x_0 + sqrt_one_minus_alpha_t_cumprod * noise
         return x_t
 
     def p_losses(self, x_0, t, noise):
@@ -197,8 +235,8 @@ class Diffusion(nn.Module):
         # define loss function wrt. the model output and the target
         # Hint: you can use pytorch built-in loss functions: F.l1_loss
         x_t = self.q_sample(x_0, t, noise)
-        pred_noise = self.model(x_t, t)
-        loss = F.l1_loss(pred_noise, noise)
+        predicted_noise = self.model(x_t, t)
+        loss = F.l1_loss(predicted_noise, noise)
         return loss
         # ####################################################
 
@@ -214,5 +252,5 @@ class Diffusion(nn.Module):
         b, c, h, w, device, img_size, = *x_0.shape, x_0.device, self.image_size
         assert h == img_size and w == img_size, f'height and width of image must be {img_size}'
         ###### TODO: Implement the forward function #######
-        t = torch.randint(0, self.num_timesteps, (b,), device=device).long()
+        t = torch.randint(0, self.timesteps, (b,), device=device)
         return self.p_losses(x_0, t, noise)
