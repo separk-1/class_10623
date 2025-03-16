@@ -5,8 +5,8 @@ from torch.nn.utils.rnn import pad_sequence
 
 def get_sentiment_prompt(text, label=''):
     #TODO: For Question 5.11, try a different prompt template for better/worse performance.
-    instruction = "Please read the following text and classify it as either positive or negative sentiment. Remember to consider the overall tone, context, and emotional cues conveyed in the text. Positive sentiments generally express happiness, satisfaction, or positivity, while negative sentiments convey sadness, anger, or negativity."
-
+    #instruction = "Please read the following text and classify it as either positive or negative sentiment. Remember to consider the overall tone, context, and emotional cues conveyed in the text. Positive sentiments generally express happiness, satisfaction, or positivity, while negative sentiments convey sadness, anger, or negativity."
+    instruction = "Evaluate the following movie review and classify it as either positive or negative based on the reviewer's overall judgment. Focus on whether the reviewer gives a favorable or unfavorable opinion about the movie's quality, considering aspects like direction, acting, plot, and pacing. Ignore the emotional tone of the movie (e.g., a sad storyline) and focus on the reviewer's overall assessment of the movie. A positive review may praise the movie's direction, acting, and engaging storyline, while a negative review may mention poor pacing, weak performances, or lackluster plot."
     INSTRUCTION_TEMPLATE = "Instruction: {}\nText: {}\nLabel: {}"
     return INSTRUCTION_TEMPLATE.format(instruction, text, label) 
 
